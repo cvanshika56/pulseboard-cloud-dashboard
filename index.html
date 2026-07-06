@@ -1,0 +1,157 @@
+<!--upload this on github -->
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulseBoard</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>● PulseBoard</h2>
+
+        <ul>
+            <li class="active">📊 Overview</li>
+            <li>⚙ Services</li>
+            <li>🚨 Alerts <span class="badge">3</span></li>
+            <li>📜 Logs</li>
+            <li>⚙ Settings</li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <div class="top">
+            <div>
+                <h1>Infrastructure Overview</h1>
+                <p>Region: ap-south-1 • 12 hosts • auto-refresh paused</p>
+            </div>
+
+            <button class="refresh-btn">Refresh</button>
+        </div>
+
+        <!-- Cards -->
+        <div class="cards">
+
+            <div class="card">
+                <h4>CPU LOAD</h4>
+                <h2>72%</h2>
+                <div class="progress">
+                    <div class="bar amber" style="width:72%"></div>
+                </div>
+                <p>avg across 12 cores</p>
+            </div>
+
+            <div class="card">
+                <h4>MEMORY</h4>
+                <h2>58%</h2>
+                <div class="progress">
+                    <div class="bar green" style="width:58%"></div>
+                </div>
+                <p>37.1 / 64 GB used</p>
+            </div>
+
+            <div class="card">
+                <h4>DISK I/O</h4>
+                <h2>88%</h2>
+                <div class="progress">
+                    <div class="bar red" style="width:88%"></div>
+                </div>
+                <p>nearing capacity</p>
+            </div>
+
+            <div class="card">
+                <h4>NETWORK</h4>
+                <h2>34%</h2>
+                <div class="progress">
+                    <div class="bar green" style="width:34%"></div>
+                </div>
+                <p>412 Mbps inbound</p>
+            </div>
+
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="bottom">
+
+            <div class="services">
+                <div class="section-header">
+                    <h3>Services</h3>
+                    <span>6 monitored</span>
+                </div>
+
+                <div class="service-row">
+                    <span>🟢 api-gateway</span>
+                    <span>42 ms</span>
+                    <span class="status operational">Operational</span>
+                </div>
+
+                <div class="service-row">
+                    <span>🟢 auth-service</span>
+                    <span>61 ms</span>
+                    <span class="status operational">Operational</span>
+                </div>
+
+                <div class="service-row">
+                    <span>🟡 payments</span>
+                    <span>310 ms</span>
+                    <span class="status degraded">Degraded</span>
+                </div>
+
+                <div class="service-row">
+                    <span>🔴 db-primary</span>
+                    <span>timeout</span>
+                    <span class="status down">Down</span>
+                </div>
+
+                <div class="service-row">
+                    <span>🟢 search</span>
+                    <span>88 ms</span>
+                    <span class="status operational">Operational</span>
+                </div>
+
+                <div class="service-row">
+                    <span>🟢 cdn-edge</span>
+                    <span>19 ms</span>
+                    <span class="status operational">Operational</span>
+                </div>
+            </div>
+
+            <!-- Alerts -->
+            <div class="alerts">
+                <h3>Recent Alerts</h3>
+
+                <div class="alert">
+                    <span class="alert-red">CRIT</span>
+                    Disk I/O above 85% on db-primary
+                </div>
+
+                <div class="alert">
+                    <span class="alert-yellow">WARN</span>
+                    CPU spike on web-03
+                </div>
+
+                <div class="alert">
+                    <span class="alert-blue">INFO</span>
+                    Auto-scaling added 1 node
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>
